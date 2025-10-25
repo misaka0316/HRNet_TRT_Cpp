@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "(gdb) Launch", // 配置名称，显示在启动配置下拉列表中
+            "type": "cppdbg", // 指定调试类型，对于 C++ 使用 cppdbg
+            "request": "launch", // 请求配置类型，可以是 launch 或 attach
+            "program": "${workspaceFolder}/build/misaka_executable", // 要调试的程序路径
+            "args": [], // 程序启动参数
+            "stopAtEntry": false, // 是否在程序入口处停止
+            "cwd": "${workspaceFolder}/", // 工作目录
+            "environment": [], // 环境变量设置
+            "externalConsole": false, // 是否打开外部控制台窗口
+            "MIMode": "gdb", // 指定使用的调试器，这里为 gdb
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "", // 如果需要在调试前执行构建任务，可以在这里指定
+            "miDebuggerPath": "/usr/bin/gdb" // 指定调试器的路径
+        }
+    ]
+}
