@@ -2,3 +2,4 @@
 *.plan
 build/
 *.jpg
+.vscode/
